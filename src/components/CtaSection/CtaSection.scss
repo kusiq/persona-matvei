@@ -1,0 +1,25 @@
+.cta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: clamp(24px, 4vw, 40px);
+  background:
+    radial-gradient(circle at top left, rgba(147, 210, 255, 0.12), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(232, 192, 139, 0.12), transparent 24%),
+    rgba(8, 14, 22, 0.88);
+
+  @media (max-width: 840px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.cta__content {
+  max-width: 760px;
+
+  h2 {
+    max-width: 18ch;
+  }
+}
+

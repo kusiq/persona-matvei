@@ -1,0 +1,75 @@
+.timeline {
+  position: relative;
+  display: grid;
+  gap: 16px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 94px;
+    width: 1px;
+    background: linear-gradient(
+      180deg,
+      rgba(147, 210, 255, 0.2) 0%,
+      rgba(255, 255, 255, 0.05) 100%
+    );
+  }
+
+  @media (max-width: 760px) {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.timeline__item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 160px minmax(0, 1fr);
+  gap: 18px;
+  padding: 22px;
+  border-radius: 26px;
+  border: 1px solid var(--line);
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(232, 192, 139, 0.08),
+      transparent 30%
+    ),
+    rgba(7, 13, 20, 0.82);
+
+  &::before {
+    display: none; /* убираем точки у периодов на таймлайне */
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 94px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #e7bf8a 0%, #94d2ff 100%);
+    box-shadow: 0 0 0 8px rgba(120, 177, 220, 0.08);
+    transform: translateY(-50%);
+  }
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.timeline__period {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.timeline__body {
+  display: grid;
+  gap: 12px;
+}
+
