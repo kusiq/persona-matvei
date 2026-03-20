@@ -1,0 +1,125 @@
+@import '@fontsource/forum/cyrillic.css';
+@import '@fontsource/forum/latin.css';
+@import '@fontsource/onest/cyrillic-400.css';
+@import '@fontsource/onest/cyrillic-500.css';
+@import '@fontsource/onest/cyrillic-700.css';
+@import '@fontsource/onest/latin-400.css';
+@import '@fontsource/onest/latin-500.css';
+@import '@fontsource/onest/latin-700.css';
+
+:root {
+  font-family: 'Onest', system-ui, sans-serif;
+  line-height: 1.55;
+  font-weight: 400;
+
+  color: #edf2f7;
+  background:
+    radial-gradient(circle at top left, rgba(124, 195, 255, 0.18), transparent 26%),
+    radial-gradient(circle at 80% 20%, rgba(214, 176, 129, 0.14), transparent 20%),
+    linear-gradient(180deg, #071018 0%, #0a1118 42%, #0c131b 100%);
+
+  --page-bg: #09111a;
+  --card-bg: rgba(12, 20, 29, 0.82);
+  --line: rgba(255, 255, 255, 0.08);
+  --line-strong: rgba(255, 255, 255, 0.12);
+  --text-strong: #f5f7fb;
+  --text-soft: #d6deeb;
+  --text-muted: #9eacbf;
+  --accent: #93d2ff;
+  --accent-warm: #e8c08b;
+  --shadow-soft:
+    0 24px 60px rgba(0, 0, 0, 0.28), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color-scheme: dark;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background-color: var(--page-bg);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 40px 40px;
+  mask-image: linear-gradient(180deg, rgba(0, 0, 0, 0.8), transparent 75%);
+}
+
+a,
+button {
+  font: inherit;
+}
+
+img {
+  max-width: 100%;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3 {
+  margin: 0;
+  color: var(--text-strong);
+}
+
+h1,
+h2 {
+  font-family: 'Forum', Georgia, serif;
+  line-height: 0.98;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+
+h1 {
+  font-size: clamp(3.2rem, 7vw, 5.9rem);
+  max-width: 11ch;
+}
+
+h2 {
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0;
+}
+
+::selection {
+  background: rgba(147, 210, 255, 0.28);
+}
+
+:focus-visible {
+  outline: 2px solid rgba(147, 210, 255, 0.75);
+  outline-offset: 3px;
+}
+
+@media (max-width: 680px) {
+  :root {
+    font-size: 15px;
+  }
+
+  body::before {
+    background-size: 28px 28px;
+  }
+}
