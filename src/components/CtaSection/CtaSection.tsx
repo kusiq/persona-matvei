@@ -16,7 +16,7 @@ export default function CtaSection() {
         </p>
       </div>
 
-      <a className="button button--primary" href="/rezume-matvey-k.docx" download>
+      <a className="button button--primary" href="rezume-matvey-k.pdf" download>
         Скачать резюме
       </a>
     </section>

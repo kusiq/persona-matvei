@@ -23,7 +23,7 @@ export default function Hero({ quickFacts, avatarSrc }: HeroProps) {
         <div className="hero__actions">
           <a
             className="button button--primary"
-            href="/rezume-matvey-k.docx"
+            href="/rezume-matvey-k.pdf"
             download
           >
             Скачать резюме
