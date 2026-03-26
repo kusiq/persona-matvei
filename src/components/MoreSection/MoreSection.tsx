@@ -8,19 +8,22 @@ type MoreSectionProps = {
 
 export default function MoreSection({ extras }: MoreSectionProps) {
   return (
-    <section className="section" id="more">
-      <div className="section-heading">
-        <p className="eyebrow">Дополнительно</p>
-        <h2>Не только код</h2>
-        <p>
+    <section className="section more" id="more">
+      <div className="more__intro">
+        <div className="section-heading">
+          <p className="eyebrow">Дополнительно</p>
+          <h2>Что усиливает мою работу</h2>
+        </div>
+
+        <p className="more__lead">
           Помимо фронтенда, у меня есть опыт в направлениях, которые делают
-          цифровой продукт сильнее и ближе к людям.
+          цифровой продукт сильнее, ближе к людям и выразительнее по подаче.
         </p>
       </div>
 
-      <div className="feature-grid feature-grid--compact">
+      <div className="more__grid">
         {extras.map((item) => (
-          <article className="card" key={item.title}>
+          <article className="more__item" key={item.title}>
             <h3>{item.title}</h3>
             <p>{item.text}</p>
           </article>
@@ -29,4 +32,3 @@ export default function MoreSection({ extras }: MoreSectionProps) {
     </section>
   )
 }
-

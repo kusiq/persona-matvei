@@ -10,14 +10,13 @@ export default function ExperienceSection({
   projects,
 }: ExperienceSectionProps) {
   return (
-    <section className="section" id="experience">
+    <section className="section experience" id="experience">
       <div className="section-heading">
         <p className="eyebrow">Опыт</p>
-        <h2>Проекты, где я был полезен</h2>
+        <h2>Где я был полезен</h2>
         <p>
-          Работал в командах разного масштаба: от небольших продуктовых
-          составов до крупных корпоративных проектов с несколькими
-          направлениями разработки.
+          Работал в командах разного масштаба: от небольших составов до крупных
+          корпоративных проектов с несколькими направлениями разработки.
         </p>
       </div>
 
@@ -28,14 +27,7 @@ export default function ExperienceSection({
             <div className="timeline__body">
               <h3>{project.title}</h3>
               <p>{project.text}</p>
-              <ul
-                className="tag-list"
-                aria-label={`Стек проекта ${project.title}`}
-              >
-                {project.stack.map((tag) => (
-                  <li key={tag}>{tag}</li>
-                ))}
-              </ul>
+              <p className="timeline__stack">{project.stack.join(' · ')}</p>
             </div>
           </article>
         ))}
@@ -43,4 +35,3 @@ export default function ExperienceSection({
     </section>
   )
 }
-

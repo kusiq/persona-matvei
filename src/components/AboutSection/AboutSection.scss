@@ -1,2 +1,58 @@
-/* AboutSection uses shared layout styles from `src/styles/shared.scss`. */
+.about {
+  display: grid;
+  gap: 26px;
+}
 
+.about__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
+  gap: 24px;
+  align-items: end;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about__lead {
+  max-width: 32rem;
+  color: var(--text-soft);
+}
+
+.about__list {
+  display: grid;
+  gap: 18px;
+}
+
+.about__item {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr);
+  gap: 18px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  transition:
+    border-color 180ms ease,
+    transform 180ms ease;
+
+  &:hover {
+    border-color: rgba(155, 207, 255, 0.28);
+    transform: translateX(4px);
+  }
+
+  @media (max-width: 640px) {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+.about__index {
+  color: rgba(155, 207, 255, 0.88);
+  font-size: 0.9rem;
+  letter-spacing: 0.16em;
+}
+
+.about__item-body {
+  display: grid;
+  gap: 8px;
+  max-width: 44rem;
+}

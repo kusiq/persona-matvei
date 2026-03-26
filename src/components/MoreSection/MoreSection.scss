@@ -1,2 +1,44 @@
-/* MoreSection uses shared layout styles from `src/styles/shared.scss`. */
+.more {
+  display: grid;
+  gap: 28px;
+}
 
+.more__intro {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(260px, 0.9fr);
+  gap: 24px;
+  align-items: end;
+
+  @media (max-width: 900px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.more__lead {
+  max-width: 34rem;
+  color: var(--text-soft);
+}
+
+.more__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0 24px;
+
+  @media (max-width: 760px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.more__item {
+  padding: 22px 0;
+  border-top: 1px solid var(--line);
+
+  h3 {
+    margin-bottom: 10px;
+  }
+
+  p {
+    max-width: 32rem;
+    color: var(--text-muted);
+  }
+}

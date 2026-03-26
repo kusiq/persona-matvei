@@ -8,16 +8,23 @@ type HeroProps = {
 export default function Hero({ quickFacts, avatarSrc }: HeroProps) {
   return (
     <section className="hero" id="home">
+      <div className="hero__visual" aria-hidden="true">
+        <img
+          className="hero__photo"
+          src={avatarSrc}
+          alt=""
+        />
+      </div>
+
+      <div className="hero__scrim" />
+
       <div className="hero__content">
-        <p className="eyebrow">Фронтенд-разработчик</p>
-        <h1>
-          Делаю понятные, аккуратные и живые интерфейсы для людей и рабочих
-          задач.
-        </h1>
+        <p className="hero__role">Фронтенд-разработчик</p>
+        <p className="hero__brand">Матвей К.</p>
+        <h1>Понятные интерфейсы, спокойный код и аккуратная подача.</h1>
         <p className="hero__lead">
-          Более 3 лет в ИТ. Основной профиль - разработка на React. Работал
-          с корпоративными порталами, бизнес-платформами и сложной логикой:
-          формулы, даты, координаты, формы и большие объёмы данных.
+          Работаю с React и TypeScript, держу в порядке сложную логику и
+          стараюсь делать продукты, в которых людям действительно удобно.
         </p>
 
         <div className="hero__actions">
@@ -38,25 +45,12 @@ export default function Hero({ quickFacts, avatarSrc }: HeroProps) {
             <li key={fact}>{fact}</li>
           ))}
         </ul>
-      </div>
 
-      <div className="hero__media">
-        <div className="hero__photo-card">
-          <img
-            className="hero__photo"
-            src={avatarSrc}
-            alt="Матвей на зимней улице"
-          />
-          <div className="hero__note hero__note--inside">
-            <span className="hero__note-label">Подход к работе</span>
-            <p>
-              Спокойно беру ответственность, умею объяснять сложное простыми
-              словами и люблю проекты, которые реально помогают людям.
-            </p>
-          </div>
-        </div>
+        <p className="hero__footnote">
+          Спокойно беру ответственность, умею объяснять сложное простыми
+          словами и люблю задачи, которые приносят реальную пользу.
+        </p>
       </div>
     </section>
   )
 }
-

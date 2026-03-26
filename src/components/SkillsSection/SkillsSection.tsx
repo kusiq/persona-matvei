@@ -10,33 +10,33 @@ export default function SkillsSection({
   additionalExperienceBullets,
 }: SkillsSectionProps) {
   return (
-    <section className="section section--split" id="skills">
-      <div className="section-heading">
-        <p className="eyebrow">Навыки</p>
-        <h2>Технологии и рабочие привычки</h2>
-        <p>
+    <section className="section skills" id="skills">
+      <div className="skills__heading">
+        <div className="section-heading">
+          <p className="eyebrow">Навыки</p>
+          <h2>Что использую в работе</h2>
+        </div>
+
+        <p className="skills__lead">
           Сильнее всего чувствую себя во фронтенде, но думаю шире одного
-          только экрана: о данных, скорости работы, чистоте кода и
-          взаимодействии внутри команды.
+          экрана: о данных, скорости, чистоте кода и нормальном взаимодействии
+          внутри команды.
         </p>
       </div>
 
-      <div className="split-grid">
-        <article className="card card--dense">
+      <div className="skills__layout">
+        <article className="skills__block">
           <h3>Основной стек</h3>
-          <ul
-            className="tag-list tag-list--wide"
-            aria-label="Основной стек"
-          >
+          <ul className="skills__grid" aria-label="Основной стек">
             {skills.map((skill) => (
               <li key={skill}>{skill}</li>
             ))}
           </ul>
         </article>
 
-        <article className="card card--dense">
+        <article className="skills__block skills__block--notes">
           <h3>Дополнительный опыт</h3>
-          <ul className="plain-list">
+          <ul className="skills__notes">
             {additionalExperienceBullets.map((item) => (
               <li key={item}>{item}</li>
             ))}
@@ -46,4 +46,3 @@ export default function SkillsSection({
     </section>
   )
 }
-
