@@ -8,16 +8,6 @@ type HeroProps = {
 export default function Hero({ quickFacts, avatarSrc }: HeroProps) {
   return (
     <section className="hero" id="home">
-      <div className="hero__visual" aria-hidden="true">
-        <img
-          className="hero__photo"
-          src={avatarSrc}
-          alt=""
-        />
-      </div>
-
-      <div className="hero__scrim" />
-
       <div className="hero__content">
         <p className="hero__role">Фронтенд-разработчик</p>
         <p className="hero__brand">Матвей К.</p>
@@ -50,6 +40,16 @@ export default function Hero({ quickFacts, avatarSrc }: HeroProps) {
           Спокойно беру ответственность, умею объяснять сложное простыми
           словами и люблю задачи, которые приносят реальную пользу.
         </p>
+      </div>
+
+      <div className="hero__media">
+        <div className="hero__photo-frame">
+          <img
+            className="hero__photo"
+            src={avatarSrc}
+            alt="Матвей на зимней улице"
+          />
+        </div>
       </div>
     </section>
   )
