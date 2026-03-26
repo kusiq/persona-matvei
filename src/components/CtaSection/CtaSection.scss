@@ -24,3 +24,26 @@
   }
 }
 
+.cta__contacts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  margin-top: 20px;
+
+  a {
+    color: var(--text-soft);
+    text-decoration: none;
+    padding-bottom: 4px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+    transition:
+      color 160ms ease,
+      border-color 160ms ease,
+      transform 160ms ease;
+
+    &:hover {
+      color: var(--text-strong);
+      border-color: rgba(147, 210, 255, 0.38);
+      transform: translateY(-1px);
+    }
+  }
+}

@@ -14,12 +14,27 @@ export default function CtaSection() {
           людей и доводить работу до спокойного результата, буду рад
           знакомству.
         </p>
+
+        <div className="cta__contacts" aria-label="Контактные данные">
+          <a href="https://t.me/mkuskov" target="_blank" rel="noreferrer">
+            t.me/mkuskov
+          </a>
+          <a href="mailto:matveykuskov@gmail.com">
+            matveykuskov@gmail.com
+          </a>
+          <a href="https://vk.ru/mkuskoff" target="_blank" rel="noreferrer">
+            vk.ru/mkuskoff
+          </a>
+        </div>
       </div>
 
-      <a className="button button--primary" href="rezume-matvey-k.pdf" download>
+      <a
+        className="button button--primary"
+        href="/rezume-matvey-k.pdf"
+        download
+      >
         Скачать резюме
       </a>
     </section>
   )
 }
-
